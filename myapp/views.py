@@ -1,27 +1,26 @@
 from django.shortcuts import render,HttpResponse
 
 # Create your views here.
-def index(request):
+def Index(request):
     return render(request,'index.html')
-# def home(request):
-#     return render(request,'home.html')
-def about(request):
-    return render(request,'AboutAs.html')
 
-    # return HttpResponse("this is about page")
+def Home(request):
+    return render(request,'home.html')
 
+def About(request):
+    return render(request,'Aboutus.html')
 
-def services(request):
-    pass
-    # return HttpResponse("this is services page")
+def Services(request):
+    return HttpResponse("this is services page")
 
 def VideoRecord(request):
     return render(request,'videoRecord.html')
-def VoiceRecord(request):
+
+def AudioRecord(request):
     return render(request,'audioRecord.html')
+
 def ClickPhotos(request):
     return render(request,'photoClick.html')
 
-
-def contact(request):
+def Contact(request):
     return render(request,'contact.html')

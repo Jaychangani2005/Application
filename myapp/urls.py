@@ -1,20 +1,13 @@
-from django.contrib import admin
 from django.urls import path
-from myapp import views
- 
-urlpatterns =[
-    path('',views.index, name='index'),
+from . import views
 
-    path('about',views.about, name='about'),
-    # path('home',views.home, name='home'),
-
-    
-    path('services',views.services, name='services'),
-    path('VideoRecord',views.VideoRecord, name='VideoRecord'),
-    path('VoiceRecord',views.VoiceRecord, name='VoiceRecord'),
-    path('ClickPhotos',views.ClickPhotos, name='ClickPhotos'),
-
-
-    path('contact',views.contact, name='contact '),
-
+urlpatterns = [
+    path('', views.Index, name='index'),
+    path('home/', views.Home, name='home'),
+    path('about/', views.About, name='about'),
+    path('services/', views.Services, name='services'),
+    path('video-record/', views.VideoRecord, name='video_record'),
+    path('audio-record/', views.AudioRecord, name='audio_record'),
+    path('click-photos/', views.ClickPhotos, name='click_photos'),
+    path('contact/', views.Contact, name='contact'),
 ]
