@@ -4,10 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Common Styles for Navbar, Pricing Tables, and Contact Form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: #fff;
+        }
+
+        /* Pricing Tables */
+        .pricing-tables {
+            padding: 60px 0;
+        }
+
+        .pricing {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 9;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .price-header {
+            width: 100%;
+            background: #fff;
+            padding: 35px 20px;
+        }
+
+        .price-header .title {
+            margin: 0 0 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #37404d;
+        }
+
+        .price-header .price {
+            font-size: 35px;
+            font-weight: 300;
+            margin: 0;
+            color: #37404d;
+        }
+
+        .content {
+            padding: 20px 20px 30px;
+            background: #f9f9f9;
+        }
+
+        .content ul {
+            margin: 0 0 20px;
+        }
+
+        .content ul li {
+            padding: 8px 0;
+            font-size: 16px;
+            color: #656565;
+        }
+
+        .featured .listing-badges {
+            position: absolute;
+            top: 0;
+            z-index: 999;
+            right: 0;
+            width: 100%;
+            display: block;
+            font-size: 15px;
+            padding: 0;
+            overflow: hidden;
+            height: 100px;
+        }
+
+        .featured .featured {
+            float: left;
+            transform: rotate(-45deg);
+            left: -67px;
+            top: 17px;
+            position: relative;
+            text-align: center;
+            width: 200px;
+            font-size: 13px;
+            margin: 0;
+            padding: 7px 10px;
+            font-weight: 500;
+            color: #fff;
+            background: #f0151f;
+        }
+
+        .btn-outline {
+            border: solid 1px #f0151f;
+            color: #f0151f;
+        }
+
+        .btn-outline:hover {
+            border: solid 1px #dc141d;
+            background: #dc141d;
+            color: #fff;
+        }
+
+        .button-theme {
+            background: #f0151f;
+            color: #FFF !important;
+        }
+
+        .button-theme:hover {
+            background: #dc141d;
+            color: #fff;
+        }
+
+        .pricing-btn {
+            padding: 7px 25px 5px;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 1150px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,179 +255,17 @@
     </div>
 
 
-    <style>
-        section {
-            padding: 60px 0;
-            min-height: 100vh;
-        }
-
-        a,
-        a:hover,
-        a:focus,
-        a:active {
-            text-decoration: none;
-            outline: none;
-        }
-
-        a,
-        a:active,
-        a:focus {
-            color: #6f6f6f;
-            text-decoration: none;
-            transition-timing-function: ease-in-out;
-            -ms-transition-timing-function: ease-in-out;
-            -moz-transition-timing-function: ease-in-out;
-            -webkit-transition-timing-function: ease-in-out;
-            -o-transition-timing-function: ease-in-out;
-            transition-duration: .2s;
-            -ms-transition-duration: .2s;
-            -moz-transition-duration: .2s;
-            -webkit-transition-duration: .2s;
-            -o-transition-duration: .2s;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .main-title {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .main-title h1 {
-            font-size: 35px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .main-title h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .main-title p {
-            font-size: 18px;
-            margin-bottom: 0;
-        }
-
-        .pricing {
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 9;
-            box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-        }
-
-        .pricing .price-header {
-            width: 100%;
-            background: #fff;
-            padding: 35px 20px;
-        }
-
-        .pricing .price-header .title {
-            margin: 0 0 10px;
-            font-size: 20px;
-            font-weight: 600;
-            color: #37404d;
-        }
-
-        .pricing .price-header .price {
-            font-size: 35px;
-            font-weight: 300;
-            margin: 0;
-            color: #37404d;
-        }
-
-        .pricing .content {
-            padding: 20px 20px 30px;
-            background: #f9f9f9;
-        }
-
-        .pricing .content ul {
-            margin: 0 0 20px;
-        }
-
-        .pricing .content ul li {
-            padding: 8px 0;
-            font-size: 16px;
-            color: #656565;
-        }
-
-        .pricing.featured .listing-badges {
-            position: absolute;
-            top: 0;
-            z-index: 999;
-            right: 0;
-            width: 100%;
-            display: block;
-            font-size: 15px;
-            padding: 0;
-            overflow: hidden;
-            height: 100px;
-        }
-
-        .pricing.featured .featured {
-            float: left;
-            transform: rotate(-45deg);
-            left: -67px;
-            top: 17px;
-            position: relative;
-            text-align: center;
-            width: 200px;
-            font-size: 13px;
-            margin: 0;
-            padding: 7px 10px;
-            font-weight: 500;
-            color: #fff;
-        }
-
-        .pricing.featured .featured {
-            background: #f0151f;
-        }
-
-        .btn-outline {
-            border: solid 1px #f0151f;
-            color: #f0151f;
-        }
-
-        .btn-outline:hover {
-            border: solid 1px #dc141d;
-            background: #dc141d;
-            color: #fff;
-        }
-
-        .button-theme {
-            background: #f0151f;
-            color: #FFF !important;
-        }
-
-        .button-theme:hover {
-            background: #dc141d;
-            color: #fff;
-        }
-
-        .pricing-btn {
-            padding: 7px 25px 5px;
-            border-radius: 2px;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-    </style>
 
 
-    <section class="pricing-tables content-area">
-        <div class="container">
+
+
+
+
+
+
+    
+    <div class="container">
+        <section class="pricing-tables content-area">
             <!-- Main title -->
             <div class="main-title text-center">
                 <h1>Pricing Tables</h1>
@@ -298,11 +331,28 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="process_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
 </body>
 
 </html>
-
-
-<!-- hello -->
