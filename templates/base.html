@@ -1,296 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>{% block title %}{% endblock title %} | JC Records</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        /* Custom navbar styles */
-        .navbar {
-            background-color: #355c7d;
-            /* Bright blue background */
-            border-bottom: 4px solid #ff4500;
-            /* Darker orange bottom border */
-
-        }
-
-        .navbar-brand {
-            color: #fff;
-            /* White brand text color */
-            font-size: 24px;
-            /* Brand text size */
-            font-weight: bold;
-            /* Brand text bold */
-        }
-
-        .navbar-toggler-icon {
-            background-color: #fff;
-            /* White toggler icon color */
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff;
-            /* White nav link text color */
-            font-weight: bold;
-            /* Nav link text bold */
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #ff4500;
-            /* Darker orange nav link text color on hover */
-        }
-
-        /* Active page link style */
-        .navbar-nav .nav-item.active .nav-link {
-            color: #ff4500;
-            /* Darker orange active link text color */
-        }
-    </style>
-
-</head>
-
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
-
-    <!-- Example Code -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">JC Records</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Features
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/VideoRecord">Video Record</a></li>
-                            <li><a class="dropdown-item" href="/VoiceRecord">Voice Record</a></li>
-                            <li><a class="dropdown-item" href="/ClickPhotos">Click Photos</a></li>
-
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- End Example Code -->
-
-
+    <html lang="en">
 
     <head>
-        <style>
-            /* Common CSS styles for all pages */
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                background-color: #f8f3f3;
-            }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-            header {
-                background: #725A7A;
-                color: #fff;
-                padding: 10px 0;
-                border-bottom: 4px solid #444;
-                border-radius: 0 0 10px 10px;
-            }
-
-            header h1 {
-                font-size: 24px;
-                margin: 0;
-            }
-
-            .container {
-                max-width: 1000px;
-                margin: 20px auto;
-                padding: 20px;
-                background-color: #e3eeee;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-
-
-            .container {
-                max-width: 1000px;
-                margin: 20px auto;
-                padding: 20px;
-                background-color: #e3eeee;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* Center horizontally */
-                justify-content: center;
-                /* Center vertically */
-            }
-
-            .carousel-indicators .active {
-                background-color: #725A7A;
-                /* Set the desired color for the active indicator */
-            }
-
-
-            .heading {
-                font-size: 52px;
-                font-weight: bold;
-                font-family: 'Playfair Display', serif;
-                /* Use Playfair Display font */
-                color: #233b3b;
-                /* Heading text color */
-                text-align: center;
-                text-transform: uppercase;
-                /* Uppercase text */
-                letter-spacing: 6px;
-                /* Letter spacing for increased readability */
-                opacity: 0;
-                /* Start with 0 opacity */
-                animation: fadeIn 2s ease-in-out forwards;
-                /* Add a fade-in animation */
-            }
-
-            /* Define the fade-in animation */
-            @keyframes fadeIn {
-                0% {
-                    opacity: 0;
-                    transform: translateY(-25px);
-                    /* Move text up slightly */
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateY(0);
-                    /* Bring text back to its original position */
-                }
-            }
-
-            h1,
-            h2 {
-                margin-top: 0;
-            }
-
-
-            /* About Us and Contact Us page specific styles */
-            form {
-                text-align: left;
-            }
-
-            label {
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            input[type="text"],
-            input[type="email"],
-            textarea {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 20px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-
-            button {
-                padding: 10px 20px;
-                font-size: 16px;
-                background-color: #233b3b;
-                color: #fff;
-                border: none;
-                cursor: pointer;
-            }
-
-            video {
-                width: 70%;
-                max-width: 70%;
-                display: block;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 2);
-            }
-
-            img {
-                max-width: 100%;
-                border-radius: 0    ;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 10);
-                display: block;
-                margin: 20px auto;
-                /* Center the image */
-            }
-
-            .button-container {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                margin-top: 20px;
-            }
-
-            button {
-                padding: 15px 30px;
-                font-size: 18px;
-                background-color: #233b3b;
-                color: #fff;
-                border: none;
-                cursor: pointer;
-                border-radius: 10px;
-                transition: background-color 0.2s ease;
-            }
-
-            button:hover {
-                background-color: #0056b3;
-            }
-
-            a {
-                display: block;
-                margin-top: 20px;
-                font-size: 18px;
-                text-decoration: none;
-                color: #007bff;
-                font-weight: bold;
-            }
-
-            /* Add responsive styles */
-            @media (max-width: 768px) {
-                .container {
-                    padding: 10px;
-                }
-
-                .button-container {
-                    flex-direction: column;
-                }
-
-                button {
-                    margin-top: 10px;
-                }
-            }
-        </style>
     </head>
 
-    {% block body %}{% endblock body %}
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">Hackathon</a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="mobile_menu">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/audio-record">About One</a></li>
+                                    <li><a href="/click-photos">About Two</a></li>
+                                    <li><a href="/video-record">About Three</a></li>
+                                    <li><a href="#">About Four</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/about">About As</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                                        class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Sign Up</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <head>
 
+{% block body %}{% endblock body %}
 
 
 </body>
-
 </html>

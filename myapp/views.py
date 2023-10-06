@@ -1,4 +1,5 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
+from .forms import ContactForm
 
 # Create your views here.
 def Index(request):
@@ -24,3 +25,17 @@ def ClickPhotos(request):
 
 def Contact(request):
     return render(request,'contact.html')
+
+def Success_page(request):
+    return render(request,'success_page.html')
+
+def contact_form(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success_page')  
+    else:
+        form = ContactForm()
+    
+    return render(request, 'success_page.html', {'form': form})
