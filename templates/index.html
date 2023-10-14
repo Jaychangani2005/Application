@@ -272,37 +272,433 @@
                         top: 0;
                     }
                 }
+        /* image style top */
+
+            .mainHeading {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 0 15px;
+            background-image: linear-gradient(to top, #b5f3ee64 0%, #ffffff 100%);
+            }
+            @media screen and (max-width: 799px) {
+            .mainHeading {
+                padding: 0 20px;
+            }
+            }
+            .mainHeading__content {
+            max-width: 1200px;
+            min-height: 640px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            }
+            @media screen and (max-width: 799px) {
+            .mainHeading__content {
+                min-height: 500px;
+            }
+            }
+            .mainHeading__text {
+            z-index: 1;
+            color: #637498;
+            background-color: rgba(168, 221, 248, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            margin-top: -80   px;
+            width: 70%;
+            backdrop-filter: blur(2px);
+            animation: text 0.8s 0.6s ease backwards;
+            position: relative;
+            }
+            .mainHeading__text:before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            top: 0;
+            left: 0;
+            animation: line 0.8s 0.6s ease backwards;
+            }
+            @keyframes line {
+            0% {
+                right: 0;
+                width: 100%;
+                opacity: 0;
+            }
+            }
+            @media screen and (max-width: 799px) {
+            .mainHeading__text {
+                padding: 20px;
+                margin: 90px 0 40px 0;
+            }
+            }
+            @keyframes text {
+            0% {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+            }
+            .mainHeading__preTitle {
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            color: #637498;
+            }
+            .mainHeading__title {
+            text-transform: uppercase;
+            font-weight: 200;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+            color: #637498;
+            }
+            @media screen and (max-width: 799px) {
+            .mainHeading__title {
+                margin-bottom: 16px;
+                font-size: 28px;
+            }
+            }
+            .mainHeading__description {
+            letter-spacing: 0.5px;
+            font-size: 16px;
+            line-height: 26px;
+            }
 
 
-        </style>
+            @media screen and (max-width: 799px) {
+            .mainHeading__description {
+                font-size: 14px;
+            }
+            }
 
 
-    </head>
+            .mainHeading__image {
+            right: 0;
+            max-width: 600px;
+            margin: 0px;
+            width: 60%;
+            height: 500px;
+            transform: translateY(100px); /* Correct the typo in "translateY" */
+            position: absolute;
+            overflow: hidden;
+            animation: image 0.6s 0.2s ease backwards;
+            /* Add the following properties to center the image horizontally */
+            top: 53%;
+            transform: translate(0, -50%);
+            }
 
 
 
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-        <title>Bootstrap Example</title>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      </head>
-      <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+            @media screen and (max-width: 799px) {
+            .mainHeading__image {
+                height: 480px;
+                width: 70%;
+                transform: translatey(80px);
+                right: -6%;
+            }
+            }
+            @keyframes image {
+            0% {
+                opacity: 0;
+                transform: translatey(200px);
+            }
+            }
+            .mainHeading__image:before, .mainHeading__image:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            top: 100%;
+            background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+            opacity: 1;
+            left: 0;
+            }
+            .mainHeading__image:before {
+            animation: imageBefore 1s 0.2s ease backwards;
+            }
+            @keyframes imageBefore {
+            0% {
+                height: 100%;
+                top: 0;
+            }
+            }
+            /* .mainHeading__image:after {
+            background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+            height: 100%;
+            top: 0;
+            opacity: 0.2;
+            } */
+            .mainHeading__image img {
+            width: 100%;
+            height: 100%;
+            }
+            @media screen and (max-width: 799px) {
+            .mainHeading__image {
+                display: none;
+            }
+            .cta {
+            padding: 16px 32px;
+            color: #637498;
+            background-color: transparent;
+            border: 3px solid rgba(99, 116, 152, 0.4);
+            font-family: "Raleway", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-top: 32px;
+            cursor: pointer;
+            box-shadow: inset 0px 0px 0px rgba(99, 116, 152, 0.2);
+            transition: all 0.4s ease;
+            }
+            .cta:hover {
+            border: 1px solid rgba(99, 116, 152, 0.1);
+            box-shadow: inset 0px -80px 0px rgba(99, 116, 152, 0.1);
+            transform: translateY(-5px);
+            }
+            @media screen and (max-width: 799px) {
+            .cta {
+                margin-top: 16px;
+            }
+            }
+        }
+
+/* style for second heading */
+
+    .learn-more-about-our-time-tracking-software {
+  text-align: center;
+  background-color: #b5f3ee64;
+  padding: 20px;
+}
+
+.learn-more-about-our-time-tracking-software h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.learn-more-about-our-time-tracking-software p {
+  font-size: 16px;
+}
+
+.learn-more-about-our-time-tracking-software a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  background-color: #c3e8f8;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 
-        <div class="card mb-3">
-            <img src="static\video.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
 
-            
-            
+/* Our Goal */
+#goal {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+.goal-left {
+    width: 60%;
+    line-height: 2rem;
+}
+
+.goal-left h2 {
+    font-size: 2.4rem;
+}
+
+.goal-left p {
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.goal-left ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.goal-left ul li::before {
+    line-height: 1.5rem;
+    content: '✓';
+    color: red;
+}
+
+.goal-right {
+    position: relative;
+    width: 35%;
+}
+
+.goal-right img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(3px 4px 5px black);
+    transition: all 0.2s linear;
+}
+
+.goal-right img:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(5px 6px 7px black);
+}
+
+
+
+
+
+/* Our Team */
+#our-Team {
+    width: 100%;
+    margin: 4rem auto 1rem;
+}
+
+#our-Team h2 {
+    text-align: center;
+    margin: 1rem auto 4rem;
+    position: relative;
+}
+
+#our-Team h2::after {
+    content: '';
+    height: 4px;
+    margin: 0 auto;
+    text-align: center;
+    width: 15%;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    transform: translate(-50%);
+}
+
+.teamContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.team-item h5 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-item span {
+    margin-top: .4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(7, 176, 176);
+}
+
+.team-item img {
+    /* width: 120px; */
+    border-radius: 50px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 784px) {
+    #list {
+        display: none;
+    }
+
+    .responsive.active {
+        left: 0%;
+    }
+
+    .goal-right {
+        width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .goal-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    #goal {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 633px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .teamContainer {
+        justify-content: center;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<!-- /* code for main image and text */ -->
+    <header class="mainHeading">
+        <div class="mainHeading__content">
+            <article class="mainHeading__text">
+                <p class="mainHeading__preTitle">nature</p>
+                <h2 class="mainHeading__title">Employee Time Clock Software.</h2>
+                <p class="mainHeading__description">
+                    Simplify employee scheduling, time tracking, & payroll. Easily track employee time, no matter where they are working.
+                </p>
+                <button class="cta">know more</button>
+            </article>
+    
+            <figure class="mainHeading__image">
+                <img
+                src="https://buddypunch.com/wp-content/uploads/2023/08/Group-34087.png.webp"
+                alt=""
+                />
+            </figure>
+        </div>
+    </header>
+
+
+
+    <div style="text-align: center;">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140">
+        <path fill="#b5f3ee64" fill-opacity="1" d="M0,0L1440,128L1440,0L0,0Z"></path>
+    </svg>
+
+    <h1 style="font-size: 42px; font-weight: bold;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Create schedules in minutes.</h1>
+    <h2 style="font-size: 24px;font-family:sans-serif;font-weight: bold;">Ensure your business is adequately covered and your staff knows exactly when to work.</h2>
+    <p style="font-size: 16px;">Need help with scheduling too? Add our employee scheduling software to save even more time.</p>
+  </div>
+<br>
+<br>
+
+
+<!-- code for the three image text
+ -->
     <section>
         <div class="container">
             <div class="row">
@@ -355,23 +751,33 @@
                 </div>
             </div>
         </div>
-        
+
 
     </section>
 
-    
+    <!-- code for second heading -->
+
+    <div class="learn-more-about-our-time-tracking-software">
+        <h1>Learn more about our time tracking software</h1>
+        <p>There's even more features to our time tracking software than we've covered - such as a Texto Punch Feature which enables you to turn SMS messaging into a clock in or clockout, all without requiring an Internet connection on your mobile device. Our goal is to be the best employee scheduling software on the market, it's to be the best software for you, your employees, and your scheduling needs</p>
+        <br>
+        <a href="#">Get a free trial</a>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
+        <path fill="#b5f3ee64" fill-opacity="1" d="M0,64L40,64C80,64,160,64,240,69.3C320,75,400,85,480,85.3C560,85,640,75,720,64C800,53,880,43,960,42.7C1040,43,1120,53,1200,53.3C1280,53,1360,43,1400,37.3L1440,32L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+      </svg>
+      
 
 
-
-
-
-    
+    <!-- /* code for price  */ -->
     <div class="container">
         <section class="pricing-tables content-area">
             <!-- Main title -->
             <div class="main-title text-center">
-                <h1>Pricing Tables</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Pricing Tables</h3>
+                <br>
+                <!-- <p></p> -->
             </div>
             <div class="row">
                 <div class="col-sm-12 col-lg-4 col-md-4">
@@ -435,9 +841,77 @@
             </div>
         </section>
 
+
+
+    <!--================== Goal Section Starts from Here ==================-->
+    <section id="goal">
+        <div class="goal-left">
+            <p style="font-size: 35px;font-family: Helvetica;"><b>Our Goal</b>
+            </p2>
+            <h3 style="font-family: Candara;">
+                We offers features such as accurate time tracking through various methods, easy scheduling management, time off tracking, 
+                detailed reporting, and user-friendly interfaces for both employees and administrators. The platform also provides customization options, 
+                mobile accessibility, and integration with payroll and HR software.</h3>
+                <br>
+            <ul>
+                <li style="font-size: 22px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">    Monitor remote workers</li>
+                <li style="font-size: 22px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">    Keep everyone accountable</li>
+                <li style="font-size: 22px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">    Ensure everyone knows what’s going on</li>
+            </ul>
+            <br>
+            <a href="" class="btn"> Contact Us</a>
+        </div>
+        <div class="goal-right">
+            <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+        </div>
+    </section>
+    <!--================== Goal Section Ends Here -->
+
+
+
+    <!--================== Our Team Section Starts from Here ==================-->
+    <section id="our-Team">
+        <h2>Our Member</h2>
+        <div class="teamContainer">
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+              <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+              <h5 class="member-name">John Smith</h5>
+              <span class="role">seo expert</span>
+          </div>
+        </div>
+    </section>
+    <!--================== Our Team Section Ends Here -->
+
+
+
+
+
+
+
+        <!-- /* code for contact */ -->
         <section class="contact-form">
             <h2>Get in Touch</h2>
-            <form action="process_form.php" method="post">
+            <form action="/success_page" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Your Name">
                 
@@ -447,6 +921,7 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required placeholder="Your Message"></textarea>
                 <button type="submit">Submit</button>
+                
             </form>
         </section>
     </div>
@@ -454,8 +929,8 @@
     <footer>
         <p>&copy; 2023 Your Company</p>
     </footer>
-</body>
-
-</html>
-
+    
+    
+    </body>
+    </html>
 {% endblock body %}
