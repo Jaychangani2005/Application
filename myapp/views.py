@@ -26,16 +26,16 @@ def ClickPhotos(request):
 def Contact(request):
     return render(request,'contact.html')
 
-def Success_page(request):
-    return render(request,'success_page.html')
-
 def contact_form(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('success_page')  
+            return render(request, 'success_page.html')
     else:
         form = ContactForm()
-    
-    return render(request, 'success_page.html', {'form': form})
+
+    return render(request, 'contact.html', {'form': form})
+
+def success_page(request):
+    return render(request, 'success_page.html')
