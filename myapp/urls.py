@@ -9,6 +9,6 @@ urlpatterns = [
     path('video-record/', views.VideoRecord, name='video_record'),
     path('audio-record/', views.AudioRecord, name='audio_record'),
     path('click-photos/', views.ClickPhotos, name='click_photos'),
-    path('contact/', views.Contact, name='contact'),
-    path('success_page/', views.Success_page, name='success_page'),
+    path('contact/', views.contact_form, name='contact_form'),
+    path('success_page/', views.success_page, name='success_page'),
 ]
