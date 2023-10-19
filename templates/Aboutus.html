@@ -1,5 +1,240 @@
 {% extends "base.html" %}
 {% block title %}About us{% endblock title %}
 {% block body %}
-<h1>About</h1>
+<head>
+    <style>
+        /* Our Goal */
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#goal {
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.goal-left {
+    width: 60%;
+    line-height: 2rem;
+}
+
+.goal-left h2 {
+    font-size: 2.4rem;
+}
+
+.goal-left p {
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.goal-left ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.goal-left ul li::before {
+    line-height: 1.5rem;
+    content: '✓';
+    color: red;
+}
+
+.goal-right {
+    position: relative;
+    width: 35%;
+}
+
+.goal-right img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(3px 4px 5px black);
+    transition: all 0.2s linear;
+}
+
+.goal-right img:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(5px 6px 7px black);
+}
+
+
+
+
+
+/* Our Team */
+#our-Team {
+    width: 100%;
+    margin: 4rem auto 1rem;
+}
+
+#our-Team h2 {
+    text-align: center;
+    margin: 1rem auto 4rem;
+    position: relative;
+}
+
+#our-Team h2::after {
+    content: '';
+    height: 4px;
+    margin: 0 auto;
+    text-align: center;
+    width: 15%;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    transform: translate(-50%);
+}
+
+.teamContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.team-item h5 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-item span {
+    margin-top: .4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(7, 176, 176);
+}
+
+.team-item img {
+    /* width: 120px; */
+    border-radius: 50px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 784px) {
+    #list {
+        display: none;
+    }
+
+    .responsive.active {
+        left: 0%;
+    }
+
+    .goal-right {
+        width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .goal-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    #goal {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 633px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .teamContainer {
+        justify-content: center;
+    }
+}
+
+    </style>
+</head>
+
+<div class="container">
+
+    <!--================== Goal Section Starts from Here ==================-->
+    <section id="goal">
+        <div class="goal-left">
+            <p style="font-size: 35px;font-family: Helvetica;"><b>Our Goal</b>
+            </p2>
+            <h3 style="font-family: Candara;">
+                We offers features such as accurate time tracking through various methods, easy scheduling management, time off tracking, 
+                detailed reporting, and user-friendly interfaces for both employees and administrators. The platform also provides customization options, 
+                mobile accessibility, and integration with payroll and HR software.</h3>
+                <br>
+            <ul>
+                <li style="font-size: 22px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">    Monitor remote workers</li>
+                <li style="font-size: 22px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">    Keep everyone accountable</li>
+                <li style="font-size: 22px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">    Ensure everyone knows what’s going on</li>
+            </ul>
+            <br>
+            <a href="" class="btn"> Contact Us</a>
+        </div>
+        <div class="goal-right">
+            <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+        </div>
+    </section>
+    <!--================== Goal Section Ends Here -->
+
+
+
+    <!--================== Our Team Section Starts from Here ==================-->
+    <section id="our-Team">
+        <h2>Our Member</h2>
+        <div class="teamContainer">
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+                <h5 class="member-name">John Smith</h5>
+                <span class="role">seo expert</span>
+            </div>
+            <div class="team-item">
+              <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
+              <h5 class="member-name">John Smith</h5>
+              <span class="role">seo expert</span>
+          </div>
+        </div>
+    </section>
+    <!--================== Our Team Section Ends Here -->
+
+</div>
+
+
 {% endblock body %}
