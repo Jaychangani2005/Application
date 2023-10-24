@@ -1,5 +1,8 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .forms import ContactForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import AuthenticationForm
+
 
 # Create your views here.
 def Index(request):
@@ -39,3 +42,18 @@ def contact_form(request):
 
 def success_page(request):
     return render(request, 'success_page.html')
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')  # Redirect to the home page upon successful login
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'login.html', {'form': form})

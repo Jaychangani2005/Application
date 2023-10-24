@@ -11,4 +11,5 @@ urlpatterns = [
     path('click-photos/', views.ClickPhotos, name='click_photos'),
     path('contact/', views.contact_form, name='contact_form'),
     path('success_page/', views.success_page, name='success_page'),
+    path('login/', views.login_view, name='login'),
 ]
