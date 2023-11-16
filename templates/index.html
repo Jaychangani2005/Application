@@ -2,6 +2,10 @@
 {% block title %}Home{% endblock title %}
 {% block body %}
 
+
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -233,7 +237,7 @@
                     font-size:15p;
                 }
                 .card-img-top{
-                    width: 100%;
+                    width: 90%;
                 }
                 .profile-card-5 .card-img-block {
                     width: 100%;
@@ -698,61 +702,74 @@ footer {
 
 <!-- code for the three image text
  -->
-    <section>
-        <div class="container">
-            <div class="row">
-                <!-- Profile Card 5 - Column 1 -->
-                <div class="col-md-4 mt-4">
-                    <div class="card profile-card-5">
-                        <div class="card-img-block">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
-                                alt="Profile Image">
-                        </div>
-                        <div class="card-body pt-0">
-                            <h5 class="card-title">Florence Garza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                        </div>
+
+ <section>
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="row">
+            <!-- Profile Card 5 - Column 1 -->
+            <div class="col-md-6 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}">
                     </div>
-                    <!-- <p class="mt-3 w-100 float-left text-center"><strong>Card with Floating Picture</strong></p> -->
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">Admin leave Requesting</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
                 </div>
-        
-                <!-- Profile Card 5 - Column 2 -->
-                <div class="col-md-4 mt-4">
-                    <div class="card profile-card-5">
-                        <div class="card-img-block">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
-                                alt="Profile Image">
-                        </div>
-                        <div class="card-body pt-0">
-                            <h5 class="card-title">Florence Garza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                        </div>
+            </div>
+
+            <!-- Profile Card 5 - Column 2 -->
+            <div class="col-md-6 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Employee.png' %}" alt="Profile Image">
                     </div>
-                    <!-- <p class="mt-3 w-100 float-left text-center"><strong>Card with Floating Picture</strong></p> -->
-                </div>
-        
-                <!-- Profile Card 5 - Column 3 -->
-                <div class="col-md-4 mt-4">
-                    <div class="card profile-card-5">
-                        <div class="card-img-block">
-                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
-                                alt="Profile Image">
-                        </div>
-                        <div class="card-body pt-0">
-                            <h5 class="card-title">Florence Garza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                the card's content.</p>
-                        </div>
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">View Employee</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <!-- <p class="mt-3 w-100 float-left text-center"><strong>Card with Floating Picture</strong></p> -->
                 </div>
             </div>
         </div>
+<br><br><br>
+        <!-- Row 2 -->
+        <div class="row mt-4">
+            <!-- Profile Card 5 - Column 1 -->
+            <div class="col-md-6">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Assigned_Tasks.png' %}" alt="Profile Image">
+                    </div>
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">Assigned Tasks</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Card 5 - Column 2 -->
+            <div class="col-md-6">
+                <div class="card profile-card-5">
+                    <div class="card-img-block">
+                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Employee.png' %}" alt="Profile Image">
+                    </div>
+                    <div class="card-body pt-0">
+                        <h5 class="card-title">View Employee</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    </section>
+
+
+
+    <!-- </section> -->
 
     <!-- code for second heading -->
 
