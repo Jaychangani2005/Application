@@ -29,6 +29,9 @@ def ClickPhotos(request):
 def Contact(request):
     return render(request,'contact.html')
 
+def Payment(request):
+    return render(request,'payment.html')
+
 def contact_form(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
