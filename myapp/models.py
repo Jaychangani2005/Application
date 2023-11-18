@@ -7,5 +7,5 @@ class ContactSubmission(models.Model):
     message = models.TextField()
     
     def __str__(self):
-        return self.name, self.email, self.message
+        return f"{self.name} - {self.email}"
 

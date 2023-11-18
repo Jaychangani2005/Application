@@ -30,7 +30,14 @@ def Contact(request):
     return render(request,'contact.html')
 
 def Payment(request):
-    return render(request,'payment.html')
+    if request.method == 'POST':
+        payment_success = True  # or False based on your logic
+        return render(request, 'success_page.html', {'payment_success': payment_success})
+    else:
+        return render(request, 'payment.html')
+
+def success_page(request):
+    return render(request, 'success_page.html', {'payment_success': True})
 
 def contact_form(request):
     if request.method == 'POST':
