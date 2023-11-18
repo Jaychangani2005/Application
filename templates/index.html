@@ -500,7 +500,90 @@
 
 
 
-/* Our Goal */
+/* showSlides */
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+                            /* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+
+
+
+
+
+
+                    /* Our Goal */
 #goal {
     width: 100%;
     margin: 2rem auto;
@@ -588,7 +671,7 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .team-item {
@@ -785,6 +868,73 @@ footer {
       </svg>
       
 
+      <!-- slideshow -->
+
+      <div class="slideshow-container">
+
+        <div class="mySlides">
+          <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+          <p class="author">- John Keats</p>
+        </div>
+        
+        <div class="mySlides">
+          <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+          <p class="author">- Ernest Hemingway</p>
+        </div>
+        
+        <div class="mySlides">
+          <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+          <p class="author">- Thomas A. Edison</p>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>  
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+
+
+
+
+
+
+
+
 
     <!-- /* code for price  */ -->
     <div class="container">
@@ -886,30 +1036,33 @@ footer {
         <h2>Our Member</h2>
         <div class="teamContainer">
             <div class="team-item">
-                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
-                <h5 class="member-name">John Smith</h5>
-                <span class="role">seo expert</span>
+                <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\ishan.jpg' %}" alt="Profile Image">
+                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Ishan Purohit</h5>
+                <span class="role">Web Developer</span>
             </div>
             <div class="team-item">
-                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
-                <h5 class="member-name">John Smith</h5>
-                <span class="role">seo expert</span>
+                <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\hiren.jpg' %}" alt="Profile Image">
+                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Hiren Limbad</h5>
+                <span class="role">Web Developer</span>
             </div>
             <div class="team-item">
-                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
-                <h5 class="member-name">John Smith</h5>
-                <span class="role">seo expert</span>
+
+                <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\jay.jpg' %}" alt="Profile Image">
+
+                <!-- <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt=""> -->
+                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Jay Changani</h5>
+                <span class="role">Web Developer</span>
             </div>
             <div class="team-item">
-                <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
-                <h5 class="member-name">John Smith</h5>
-                <span class="role">seo expert</span>
+                <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\vivek.jpg' %}" alt="Profile Image">
+                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Vivek Kantariya</h5>
+                <span class="role">Web Developer</span>
             </div>
             <div class="team-item">
-              <img src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c" alt="">
-              <h5 class="member-name">John Smith</h5>
-              <span class="role">seo expert</span>
-          </div>
+              <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\radhika.jpg' %}" alt="Profile Image">
+              <h5 class="member-name" style="font-weight: bold;font-size: medium;">Radhika Mer</h5>
+              <span class="role">Web Developer</span>
+            </div>
         </div>
     </section>
   
