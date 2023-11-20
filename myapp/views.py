@@ -14,20 +14,23 @@ def Home(request):
 def About(request):
     return render(request,'Aboutus.html')
 
-def Services(request):
-    return HttpResponse("this is services page")
+def Salary_based_attendance(request):
+    return render(request,'salarybasedattendance.html')
 
-def VideoRecord(request):
-    return render(request,'videoRecord.html')
+def AssignTask(request):
+    return render(request,'assigntask.html')
 
-def AudioRecord(request):
-    return render(request,'audioRecord.html')
+def LeaveManage(request):
+    return render(request,'leavemanage.html')
 
-def ClickPhotos(request):
-    return render(request,'photoClick.html')
+def AttendanceManage(request):
+    return render(request,'attendancemanage.html')
 
 def Contact(request):
     return render(request,'contact.html')
+
+def Freedemo(request):
+    return render(request,'freedemo.html')
 
 def Payment(request):
     if request.method == 'POST':
