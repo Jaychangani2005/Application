@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}click-photos{% endblock title %}
+{% block title %}leavemanage{% endblock title %}
 {% block body %}
 
 {% load static %}
@@ -98,6 +98,23 @@
     background: #ddd;
   }
   
+
+.btn {
+    width: 190px; /* Adjust width as needed */
+    height: 45px; /* Adjust height as needed */
+    display: inline-block;
+    text-align: center;
+    line-height: 40px; /* Match the button height for vertical alignment */
+    background-color: #007bff; /* Blue background color, you can change this color code */
+    color: #fff; /* Text color, usually white on a colored background */
+    text-decoration: none; /* Remove underlines for links */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.btn:hover {
+    background-color: #478fdb; /* Darker shade on hover, adjust as needed */
+}
+
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 700px) {
     .row {
@@ -132,21 +149,21 @@
         <h3>Some Other Feature</h3>
   <br>
   
-        <a href="/click-photos" class="btn btn-primary mt-3">
-            Click me to open a new page
-        </a>
-  
-        <br><br>
-  
-        <a href="/click-photos" class="btn btn-primary mt-3">
-          Click me to open a new page
+        <a href="/assigntask" class="btn" >
+          Assigned Tasks
       </a>
-  
+
       <br><br>
-  
-        <a href="/video-record" class="btn btn-primary">
-            Click me to open a new page
-        </a>
+
+      <a href="/attendancemanage" class="btn">
+        Attendance Management
+      </a>
+
+      <br><br>
+
+      <a href="/salarybasedattendance" class="btn">
+        Salary Based Attendance
+      </a>
     </div>
     </div>
   
@@ -154,7 +171,10 @@
     <div class="main">
       <h2>leave management</h2>
       <!-- <h5>Title description, Dec 7, 2017</h5> -->
-      <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image">
+      <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png" alt="Profile Image">
+
+     
+      <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image"> -->
   
       <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
       <h3 style="font-family: Verdana;">The "Leave Management" feature in the employee management system revolutionizes the handling of employee time-off requests. Administrators can effortlessly create and manage leave requests, specifying details like duration, reason, and dates. This feature empowers employees by providing a dedicated portal to submit leave requests, check leave balances, and view the status of their requests. Automated notifications keep both employees and administrators informed about the approval status and upcoming leave schedules. The system incorporates a centralized dashboard for administrators to efficiently review, approve, or reject leave requests, ensuring compliance with organizational policies. The integration of customizable leave categories and accrual rules adds flexibility to accommodate various leave types and company policies. Additionally, comprehensive reporting tools provide insights into leave trends, helping administrators plan for workforce availability. Mobile accessibility enables employees to manage leave requests conveniently, fostering a responsive and flexible work environment. With features like calendar integration, role-based access controls, and historical leave data, the "Leave Management" feature promotes transparency, fairness, and efficiency in managing employee leaves.

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}click-photos{% endblock title %}
+{% block title %}assigntask{% endblock title %}
 {% block body %}
 
 {% load static %}
@@ -97,6 +97,21 @@ body {
   text-align: center;
   background: #ddd;
 }
+.btn {
+    width: 190px; /* Adjust width as needed */
+    height: 45px; /* Adjust height as needed */
+    display: inline-block;
+    text-align: center;
+    line-height: 40px; /* Match the button height for vertical alignment */
+    background-color: #007bff; /* Blue background color, you can change this color code */
+    color: #fff; /* Text color, usually white on a colored background */
+    text-decoration: none; /* Remove underlines for links */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.btn:hover {
+    background-color: #478fdb; /* Darker shade on hover, adjust as needed */
+}
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -132,20 +147,20 @@ body {
       <h3>Some Other Feature</h3>
 <br>
 
-      <a href="/click-photos" class="btn btn-primary mt-3">
-          Click me to open a new page
+      <a href="/attendancemanage" class="btn" >
+        Attendance Management
       </a>
 
       <br><br>
 
-      <a href="/click-photos" class="btn btn-primary mt-3">
-        Click me to open a new page
-    </a>
+      <a href="/leavemanage" class="btn">
+        Leave management
+      </a>
 
     <br><br>
 
-      <a href="/video-record" class="btn btn-primary">
-          Click me to open a new page
+      <a href="/salarybasedattendance" class="btn">
+        Salary Based Attendance
       </a>
   </div>
   </div>
@@ -154,7 +169,10 @@ body {
   <div class="main">
     <h2>assign tasks</h2>
     <!-- <h5>Title description, Dec 7, 2017</h5> -->
-    <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image">
+    <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png" alt="Profile Image">
+
+  
+    <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image"> -->
 
     <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
     <h3 style="font-family: Verdana;">The "Task Assignment" feature significantly enhances project management within the employee management system. Administrators can efficiently create tasks with detailed information, such as descriptions, due dates, and priority levels. Employees, in turn, benefit from a user-friendly interface where they can access assigned tasks, track progress, and update task statuses, ensuring a transparent workflow. The feature includes automated notifications, enabling timely responses to new assignments and approaching deadlines. Robust collaboration tools within the system facilitate seamless communication among team members, fostering a collaborative work environment. Advanced analytics and reporting capabilities empower administrators with insights into workload distribution, task completion rates, and overall project timelines. Additionally, the integration of mobile accessibility ensures that employees can manage tasks on-the-go, promoting flexibility and productivity. With customizable features, task dependencies, and historical data tracking, the "Task Assignment" feature adapts to the organization's unique needs, providing a comprehensive and scalable solution for effective task management and project success.

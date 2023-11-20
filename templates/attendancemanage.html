@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Salary{% endblock title %}
+{% block title %}attendancemanage{% endblock title %}
 {% block body %}
 
 {% load static %}
@@ -98,6 +98,7 @@
     text-align: center;
     background: #ddd;
   }
+
   .btn {
     width: 190px; /* Adjust width as needed */
     height: 45px; /* Adjust height as needed */
@@ -114,6 +115,7 @@
     background-color: #478fdb; /* Darker shade on hover, adjust as needed */
 }
 
+  
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 700px) {
     .row {
@@ -147,22 +149,22 @@
   
         <h3>Some Other Feature</h3>
   <br>
+  
+        <a href="/assigntask" class="btn" >
+             Assigned Tasks
+        </a>
 
-      <a href="/assigntask" class="btn" >
-        Assigned Tasks
-    </a>
+        <br><br>
 
-    <br><br>
+        <a href="/leavemanage" class="btn">
+            Leave management
+        </a>
 
-    <a href="/attendancemanage" class="btn">
-      Attendance Management
-    </a>
+        <br><br>
 
-    <br><br>
-
-    <a href="/leavemanage" class="btn">
-      Leave Management
-    </a>
+        <a href="/salarybasedattendance" class="btn">
+            Salary Based Attendance
+        </a>
 
     </div>
     </div>
@@ -171,7 +173,6 @@
     <div class="main">
       <h2>leave management</h2>
       <!-- <h5>Title description, Dec 7, 2017</h5> -->
-
       <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png" alt="Profile Image">
 
       <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image"> -->

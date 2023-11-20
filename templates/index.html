@@ -511,7 +511,10 @@ body {font-family: Verdana, sans-serif; margin:0}
   position: relative;
   background: #f1f1f1f1;
 }
-
+.line_container{
+    width: 80%;
+    margin: 0 auto;
+}
                             /* Slides */
 .mySlides {
   display: none;
@@ -667,11 +670,11 @@ q {font-style: italic;}
 }
 
 .teamContainer {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .team-item {
@@ -756,7 +759,7 @@ footer {
                 <p class="mainHeading__description">
                     Simplify employee scheduling, time tracking, & payroll. Easily track employee time, no matter where they are working.
                 </p>
-                <button class="cta">know more</button>
+                <!-- <button class="cta">know more</button> -->
             </article>
     
             <figure class="mainHeading__image">
@@ -794,7 +797,7 @@ footer {
             <div class="col-md-6 mt-4">
                 <div class="card profile-card-5">
                     <div class="card-img-block">
-                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}">
+                        <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png">
                     </div>
                     <div class="card-body pt-0">
                         <h5 class="card-title">Admin leave Requesting</h5>
@@ -807,7 +810,7 @@ footer {
             <div class="col-md-6 mt-4">
                 <div class="card profile-card-5">
                     <div class="card-img-block">
-                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Employee.png' %}" alt="Profile Image">
+                        <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png" alt="Profile Image">
                     </div>
                     <div class="card-body pt-0">
                         <h5 class="card-title">View Employee</h5>
@@ -823,7 +826,7 @@ footer {
             <div class="col-md-6">
                 <div class="card profile-card-5">
                     <div class="card-img-block">
-                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Assigned_Tasks.png' %}" alt="Profile Image">
+                        <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png" alt="Profile Image">
                     </div>
                     <div class="card-body pt-0">
                         <h5 class="card-title">Assigned Tasks</h5>
@@ -836,7 +839,7 @@ footer {
             <div class="col-md-6">
                 <div class="card profile-card-5">
                     <div class="card-img-block">
-                        <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Employee.png' %}" alt="Profile Image">
+                        <img class="card-img-top" src="https://i.ibb.co/Pxy926d/Screenshot-2023-11-15-225244.png" alt="Profile Image">
                     </div>
                     <div class="card-body pt-0">
                         <h5 class="card-title">View Employee</h5>
@@ -860,7 +863,7 @@ footer {
         <h1>Learn more about our time tracking software</h1>
         <p>There's even more features to our time tracking software than we've covered - such as a Texto Punch Feature which enables you to turn SMS messaging into a clock in or clockout, all without requiring an Internet connection on your mobile device. Our goal is to be the best employee scheduling software on the market, it's to be the best software for you, your employees, and your scheduling needs</p>
         <br>
-        <a href="#">Get a free trial</a>
+        <a href="/freedemo">Get a free trial</a>
       </div>
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100">
@@ -872,21 +875,28 @@ footer {
 
       <div class="slideshow-container">
 
-        <div class="mySlides">
-          <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
-          <p class="author">- John Keats</p>
+          <div class="line_container">
+          <div class="mySlides">
+              <q>Empower your workforce with our system, a robust tool simplifying management complexities, paving the way for enhanced productivity and growth.
+                  
+            </q>
+            <!-- <p class="author">- John Keats</p> -->
         </div>
         
         <div class="mySlides">
-          <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
-          <p class="author">- Ernest Hemingway</p>
+            <q>Experience effortless management, unlocking endless possibilities as our system simplifies complexities, making tasks easy and results boundless.
+
+            </q>
+            <!-- <p class="author">- Ernest Hemingway</p> -->
         </div>
         
         <div class="mySlides">
-          <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-          <p class="author">- Thomas A. Edison</p>
+            <q>Where precision meets performance, our management magic enchants every operation, ensuring clarity, productivity, and unmatched success.
+
+            </q>
+            <!-- <p class="author">- Thomas A. Edison</p> -->
         </div>
-        
+        </div>
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
         
@@ -949,8 +959,8 @@ footer {
                 <div class="col-sm-12 col-lg-4 col-md-4">
                     <div class="pricing">
                         <div class="price-header">
-                            <div class="title">Basic Plan</div>
-                            <div class="price">$20.99</div>
+                            <div class="title">Weekly</div>
+                            <div class="price">$5.00</div>
                         </div>
                         <div class="content">
                             <ul>
@@ -970,8 +980,9 @@ footer {
                             <span class="featured">Featured</span>
                         </div>
                         <div class="price-header price-header-2">
-                            <div class="title">Professional</div>
-                            <div class="price">$20.99</div>
+                            <div class="title">Yearly</div>
+                            <div class="price">$165.00</div>
+
                         </div>
                         <div class="content">
                             <ul>
@@ -989,9 +1000,9 @@ footer {
                 <div class="col-sm-12 col-lg-4 col-md-4">
                     <div class="pricing">
                         <div class="price-header">
-                            <div class="title">Exclusive</div>
-                            <div class="price">$20.99</div>
-                        </div>
+
+                            <div class="title">Monthly</div>
+                            <div class="price">$15.00</div>                        </div>
                         <div class="content">
                             <ul>
                                 <li>20 Projects</li>
@@ -1036,40 +1047,42 @@ footer {
         <h2>Our Member</h2>
         <div class="teamContainer">
             <div class="team-item">
+                <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\hiren.jpg' %}" alt="Profile Image"> -->
+                <img src="https://i.ibb.co/W6G2F8D/hiren.jpg" alt="Profile Image">
+                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Hiren Limbad</h5>
+                <span class="role" style="font-size: medium;">Backend Developer</span>
+
+            </div>
+            <div class="team-item">
+                
+                <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\jay.jpg' %}" alt="Profile Image"> -->
+                
+                <img src="https://i.ibb.co/HgLVTsV/jay.jpg" alt="Profile Image">
+                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Jay Changani</h5>
+                <span class="role" style="font-size: medium;" >Web and UI designer</span>
+            </div>
+
+            <div class="team-item">
                 <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\ishan.jpg' %}" alt="Profile Image"> -->
                 <img src="https://i.ibb.co/bLPB3Gg/ishan.jpg" alt="Profile Image">
 
                 <h5 class="member-name" style="font-weight: bold;font-size: medium;">Ishan Purohit</h5>
-                <span class="role">Web Developer</span>
+                <span class="role" style="font-size: medium;">Leader</span>
             </div>
-            <div class="team-item">
-                <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\hiren.jpg' %}" alt="Profile Image"> -->
-                <img src="https://i.ibb.co/W6G2F8D/hiren.jpg" alt="Profile Image">
-                
-                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Hiren Limbad</h5>
-                <span class="role">Web Developer</span>
-            </div>
-            <div class="team-item">
 
-                <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\jay.jpg' %}" alt="Profile Image"> -->
-
-                <img src="https://i.ibb.co/HgLVTsV/jay.jpg" alt="Profile Image">
-                <h5 class="member-name" style="font-weight: bold;font-size: medium;">Jay Changani</h5>
-                <span class="role">Web Developer</span>
-            </div>
             <div class="team-item">
                 <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\vivek.jpg' %}" alt="Profile Image"> -->
                 <img src="https://i.ibb.co/g4j6Jrr/vivek.jpg" alt="Profile Image">
 
                 <h5 class="member-name" style="font-weight: bold;font-size: medium;">Vivek Kantariya</h5>
-                <span class="role">Web Developer</span>
+                <span class="role" style="font-size: medium;">Full Stack developer</span>
             </div>
             <div class="team-item">
               <!-- <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\radhika.jpg' %}" alt="Profile Image"> -->
               <img src="https://i.ibb.co/dLRNtXL/radhika.jpg" alt="Profile Image">
 
               <h5 class="member-name" style="font-weight: bold;font-size: medium;">Radhika Mer</h5>
-              <span class="role">Web Developer</span>
+              <span class="role" style="font-size: medium;">Tester</span>
             </div>
         </div>
     </section>
@@ -1091,6 +1104,60 @@ footer {
             </form>
         </section>
     </div>
+
+<!-- Top button  -->
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+        }
+        
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: red;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+          background-color: #555;
+        }
+        </style>
+        </head>
+        <body>
+      
+      
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+        let mybutton = document.getElementById("myBtn");
+      
+        window.onscroll = function() {scrollFunction()};
+      
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
+
 
     <footer>
         <p>&copy; 2023 Your Company</p>
