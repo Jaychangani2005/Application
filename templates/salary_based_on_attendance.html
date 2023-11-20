@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-{% block title %}click-photos{% endblock title %}
+{% block title %}salary based on attendance{% endblock title %}
 {% block body %}
 
 {% load static %}
+
 
 <head>
 <style>
@@ -116,7 +117,7 @@ body {
 </head>
 <body>
 <div class="header">
-  <h1 style="font-family: Helvetica; font-size: 60px;">ASSIGN TASKS </h1>
+  <h1 style="font-family: Helvetica; font-size: 60px;">leave management</h1>
   <!-- <p style="font-family: Monospace;">A website created by me.</p> -->
 </div>
 
@@ -152,12 +153,12 @@ body {
 
 
   <div class="main">
-    <h2>assign tasks</h2>
+    <h2>leave management</h2>
     <!-- <h5>Title description, Dec 7, 2017</h5> -->
     <img class="card-img-top" src="{% static 'C:\Users\91940\Desktop\Application\static\Admin_leave_Requesting.png' %}" alt="Profile Image">
 
     <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
-    <h3 style="font-family: Verdana;">The "Task Assignment" feature significantly enhances project management within the employee management system. Administrators can efficiently create tasks with detailed information, such as descriptions, due dates, and priority levels. Employees, in turn, benefit from a user-friendly interface where they can access assigned tasks, track progress, and update task statuses, ensuring a transparent workflow. The feature includes automated notifications, enabling timely responses to new assignments and approaching deadlines. Robust collaboration tools within the system facilitate seamless communication among team members, fostering a collaborative work environment. Advanced analytics and reporting capabilities empower administrators with insights into workload distribution, task completion rates, and overall project timelines. Additionally, the integration of mobile accessibility ensures that employees can manage tasks on-the-go, promoting flexibility and productivity. With customizable features, task dependencies, and historical data tracking, the "Task Assignment" feature adapts to the organization's unique needs, providing a comprehensive and scalable solution for effective task management and project success.
+    <h3 style="font-family: Verdana;">The "Attendance Management" feature in the employee management system revolutionizes the tracking and optimization of employee attendance. This comprehensive functionality allows employees to easily log their attendance, whether through manual input or integrated time-tracking systems. The system automates attendance record keeping, offering real-time insights into employee presence, absence, and punctuality. It further incorporates robust reporting tools, enabling administrators to analyze attendance patterns, identify trends, and make informed decisions for resource allocation. Role-based access controls ensure secure data handling, protecting sensitive attendance information. With a user-friendly interface and mobile accessibility, employees can conveniently input their attendance details, fostering engagement and compliance. The feature seamlessly integrates with payroll systems, streamlining salary calculations based on attendance records. By promoting transparency, efficiency, and compliance with labor regulations, the "Attendance Management" feature becomes an integral component of the employee management system, contributing to a culture of accountability and productivity within the organization.
     </h3>
     <br>
   </div>
@@ -174,7 +175,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
-  
+
   #myBtn {
     display: none;
     position: fixed;
