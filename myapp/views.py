@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .forms import ContactForm
+from .models import BookFree
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -31,6 +32,31 @@ def Contact(request):
 
 def Freedemo(request):
     return render(request,'freedemo.html')
+
+def CongratsFree(request):
+    return render(request,'congratsfree.html')
+
+def bookfree(request):
+    if request.method == 'POST':
+        full_name = request.POST['full_name']
+        email = request.POST['email']
+
+        book_free = BookFree.objects.create(full_name=full_name, email=email)
+
+        return redirect('congratsfree')
+    else:
+        return render(request, 'bookfree.html')
+    
+def trynow(request):
+    if request.method == 'POST':
+        full_name = request.POST['full_name']
+        email = request.POST['email']
+
+        book_free = BookFree.objects.create(full_name=full_name, email=email)
+
+        return redirect(request, 'congratsfree.html', {'book_free': book_free})
+    else:
+        return render(request, 'bookfree.html')
 
 def Payment(request):
     if request.method == 'POST':
