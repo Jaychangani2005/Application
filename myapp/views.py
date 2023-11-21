@@ -1,8 +1,9 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .forms import ContactForm
+from .models import BookFree
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
-
+from django.db import connection as conn
 
 # Create your views here.
 def Index(request):
@@ -31,6 +32,39 @@ def Contact(request):
 
 def Freedemo(request):
     return render(request,'freedemo.html')
+
+def CongratsFree(request):
+    return render(request,'congratsfree.html')
+
+def bookfree(request):
+    try:
+        if request.method == 'POST':
+            email = request.POST['email']
+            password = request.POST['password']
+            # code to save the data in the database using sql
+            query = "INSERT INTO admin_login (username, password) VALUES ('{}', '{}')".format(email, password)
+            with conn.cursor() as cursor:
+                row_affected = cursor.execute(query)
+                conn.commit()
+            
+            if row_affected > 0:
+                return redirect('congratsfree')
+            else:
+                return redirect('bookfree.html', {'error': 'Some error occurred. Please try again.'})
+        else:
+            return render(request, 'bookfree.html', {'error': 'Start'})
+    except Exception as e:
+        return render(request, 'bookfree.html', {'error': 'You are already registered. Please login.'})
+def trynow(request):
+    if request.method == 'POST':
+        full_name = request.POST['full_name']
+        email = request.POST['email']
+
+        book_free = BookFree.objects.create(full_name=full_name, email=email)
+
+        return redirect(request, 'congratsfree.html', {'book_free': book_free})
+    else:
+        return render(request, 'bookfree.html')
 
 def Payment(request):
     if request.method == 'POST':
