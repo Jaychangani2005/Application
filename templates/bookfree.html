@@ -192,22 +192,22 @@
 <body>
     <div class="wrapper">
         <h2> Free Trial</h2>
-        <form method="POST" action="{% url 'congratsfree' %}">
+        <form method="POST" action="{% url 'bookfree' %}">
             {% csrf_token %}
             <h4>Create Your Free Trial Account</h4>
-            <label for="full_name">Enter Name</label>
+            <label for="full_name">Enter Email</label>
             <div class="input-group">
             <div class="input-box">
-                <input type="text" name="full_name" id="full_name" placeholder="Full Name" required class="name">
+                <input type="text" name="email" id="full_name" placeholder="Email" required class="name">
                 <i class="fa fa-user icon"></i>
             </div>
 
 
             </div>
-            <label for="full_name">Enter Email</label>
+            <label for="full_name">Enter Password</label>
             <div class="input-group">
                 <div class="input-box">
-                    <input type="email" name="email" placeholder="Email Address" required class="name">
+                    <input type="password" name="password" placeholder="Password" required class="name">
                     <i class="fa fa-envelope icon"></i>
                 </div>
             </div>
@@ -215,7 +215,9 @@
                 <div class="input-box">
                     <button type="submit">Register</button>
             </div>
-            </div>
+
+        </div>
+        <p style="color: red;"> {{ error }} </p>
         </form>
     </div>
 </body>
