@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 <html>
 <head>
 <style>
   .relative {
   position: relative;
 }
+=======
+{% extends "base.html" %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+>>>>>>> 00190b2c2f3742f3bec0451908bb8765d0f09642
 
 .absolute {
   position: absolute;
@@ -21,6 +27,7 @@
   text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+<<<<<<< HEAD
   
 .text-on-image {
   top: 50%;
@@ -29,10 +36,94 @@
   color: white;
   text-align: center;
 }
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* display: flex;   */
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Ensure the page takes up at least the viewport height */
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2px 0;
+            width: 100%;
+        }
+
+        main {
+            max-width: 1000px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .contact-form {
+            background-color: #f7f7f7;
+            padding: 20 px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+>>>>>>> 00190b2c2f3742f3bec0451908bb8765d0f09642
 
 </style>
 </head>
 
+<<<<<<< HEAD
 <div class="relative">
   <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="">
 
@@ -43,3 +134,41 @@
 </div>
 
 </html>
+=======
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+
+
+    <center>
+        <main>
+            <section class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="/success_page/" method="post">
+                    {% csrf_token %}
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+    </center>
+
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+</body>
+
+</html>
+
+{% endblock body %}
+>>>>>>> 00190b2c2f3742f3bec0451908bb8765d0f09642
